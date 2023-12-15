@@ -1,11 +1,12 @@
 function htmlspecialchars(formData) {
   let str = formData;
-  const ltStr = str.replace(/</g, "&lt;");
+  const ampStr = str.replace(/&/g, "&amp;");
+  const ltStr = ampStr.replace(/</g, "&lt;");
   const gtStr = ltStr.replace(/>/g, "&gt;");
-  const quotStr = gtStr.replace(/</g, "&quot;");
-  const ampStr = quotStr.replace(/</g, "&amp;");
-  console.log(ampStr);
-  return ampStr;
+  const quotStr = gtStr.replace(/"/g, "&quot;");
+
+  console.log(quotStr);
+  return quotStr;
 }
 
-htmlspecialchars("<h2>Hello World</h2>");
+htmlspecialchars("&lt;h2>Hello World</h2>");

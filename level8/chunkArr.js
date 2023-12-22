@@ -7,4 +7,4 @@ function eachCons(array, n) {
   console.log(arr);
 }
 
-// enumerable magic #20- Cascading Subsets
+// enumerable magic #20-Cascading Subsets

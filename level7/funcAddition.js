@@ -1,2 +1,6 @@
-//www.codewars.com/kata/538835ae443aae6e03000547/train/javascript
-https: function add(n) {}
+function add(n) {
+  function add_another(x) {
+    return x + n;
+  }
+  return add_another;
+}

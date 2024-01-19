@@ -8,5 +8,5 @@ function numberJoy(n) {
 
   let reverseSum = parseInt(sum.toString().split("").reverse().join(""));
 
-  return n % sum === 0 && sum * reverseSum === n ? true : false;
+  return !!(n % sum === 0 && sum * reverseSum === n);
 }

@@ -36,6 +36,7 @@ function rainTacos(landscape) {
   // console.log(reversed);
 
   for (let i = 0; i < strArr.length; i++) {
+    console.log(i);
     for (let j = 0; j < strArr[i].length; j++) {
       if (
         i + 1 < strArr.length &&
@@ -45,12 +46,16 @@ function rainTacos(landscape) {
       ) {
         strArr[i][j] = testStr[j];
       }
+      if (i == strArr.length - 1) {
+        strArr[i][j] = testStr[j];
+      }
     }
   }
-  console.log(strArr);
+  console.log(strArr.length - 1);
+  //if (strArr[strArr.length - 1].includes) console.log(strArr);
   let stringResult = strArr.map((innerArray) => innerArray.join("")).join("");
   console.log(stringResult);
   return stringResult;
 }
-rainTacos("          \n    ==    \n          \n          \n          ");
+rainTacos("       \n       \n   O   \n  OOO  \n TACOS ");
 // https://www.codewars.com/kata/64f4ef596f222e004b877272/train/javascript

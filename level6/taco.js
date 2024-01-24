@@ -1,5 +1,5 @@
 function rainTacos(landscape) {
-  if (landscape === "") {
+  if (landscape === "" || landscape === undefined) {
     return "";
   }
   let tempArr = [];
@@ -31,12 +31,11 @@ function rainTacos(landscape) {
     j++;
   }
 
-  //let reversed = strArr.reverse();
   console.log(testStr);
-  // console.log(reversed);
+  let jArr = [];
 
   for (let i = 0; i < strArr.length; i++) {
-    console.log(i);
+    //console.log(i);
     for (let j = 0; j < strArr[i].length; j++) {
       if (
         i + 1 < strArr.length &&
@@ -45,17 +44,23 @@ function rainTacos(landscape) {
         strArr[i + 1][j] != " "
       ) {
         strArr[i][j] = testStr[j];
+        console.log(j);
+        jArr.push(j);
       }
-      if (i == strArr.length - 1) {
+      console.log(jArr);
+      if (
+        i === strArr.length - 1 &&
+        strArr[i][j] === " " &&
+        jArr.every((el) => j != el)
+      ) {
         strArr[i][j] = testStr[j];
       }
     }
   }
-  console.log(strArr.length - 1);
-  //if (strArr[strArr.length - 1].includes) console.log(strArr);
+
   let stringResult = strArr.map((innerArray) => innerArray.join("")).join("");
   console.log(stringResult);
   return stringResult;
 }
-rainTacos("       \n       \n   O   \n  OOO  \n TACOS ");
+rainTacos("* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *");
 // https://www.codewars.com/kata/64f4ef596f222e004b877272/train/javascript

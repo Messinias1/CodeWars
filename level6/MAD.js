@@ -16,6 +16,7 @@ function gettingMad(array) {
 
   console.log(sumsArr);
   console.log(Math.min(...sumsArr));
+  console.log("hi");
   return Math.min(...sumsArr);
 }
 

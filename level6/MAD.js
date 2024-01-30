@@ -7,6 +7,7 @@ function gettingMad(array) {
 
     for (let x = 0; x < array.length; x++) {
       console.log("i", i, "x", x);
+      console.log(i * x);
       console.log("num", num, " sumsArr[x]", array[x]);
       if (i != x) {
         sumsArr.push(Math.abs(num - array[x]));

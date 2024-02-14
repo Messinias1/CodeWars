@@ -9,6 +9,6 @@ function solution(n) {
       sum += i;
     }
   }
-  console.log(sum);
+  console.log(sum + 1);
   return sum;
 }

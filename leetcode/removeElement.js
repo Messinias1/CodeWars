@@ -3,4 +3,6 @@
  * @param {number} val
  * @return {number}
  */
-var removeElement = function (nums, val) {};
+var removeElement = function (nums, val) {
+  console.log(nums);
+};

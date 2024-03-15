@@ -5,4 +5,5 @@
  */
 var removeElement = function (nums, val) {
   console.log(nums, " ", val);
+  let sum = nums + val;
 };

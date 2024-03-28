@@ -3,7 +3,14 @@
  * @return {number}
  */
 var majorityElement = function (nums) {
-  console.log(nums);
+  let max = nums[0];
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] > max) {
+      max = nums[i];
+    }
+  }
+  console.log(max);
 };
 
 majorityElement([1, 2, 2, 3, 4, 5]);

@@ -3,15 +3,20 @@
  * @return {number}
  */
 var majorityElement = function (nums) {
-  let max = nums[0];
-  let count = 0;
+  const countMap = {};
+  let maxCount = 0;
+  let mostFrequentElement = null;
 
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] > max) {
-      max = nums[i];
+  nums.forEach((element) => {
+    countMap[element] = (countMap[element] || 0) + 1;
+
+    if (countMap[element] > maxCount) {
+      maxCount = countMap[element];
+      mostFrequentElement = element;
     }
-  }
-  console.log(max);
+  });
+
+  console.log(mostFrequentElement);
 };
 
 majorityElement([1, 2, 2, 3, 4, 5]);

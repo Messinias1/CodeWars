@@ -17,6 +17,7 @@ var majorityElement = function (nums) {
   });
 
   console.log(mostFrequentElement);
+  console.log(maxCount);
 };
 
 majorityElement([1, 2, 2, 3, 4, 5]);

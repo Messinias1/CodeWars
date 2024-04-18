@@ -3,10 +3,8 @@
  * @return {number}
  */
 var majorityElement = function (nums) {
-  console.log(nums);
-  for (let i = 0; i < nums.length; i++) {
-    console.log(nums[i]);
-  }
+  nums.sort((a, b) => a - b);
+  return nums[Math.floor(nums.length / 2)];
 };
 
-majorityElement([1, 2, 2, 3, 4, 5]);
+majorityElement([3, 2, 3]);

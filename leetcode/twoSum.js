@@ -10,6 +10,7 @@ var twoSum = function (nums, target) {
       if (nums[i] + nums[j] === target) {
         arr.push(i);
         arr.push(j);
+        return arr;
       }
     }
   }
